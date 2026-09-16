@@ -288,12 +288,12 @@ def check_permission(tool_name: str, tool_args: dict, **kwargs):
         for pattern in DENY_LIST:
             if pattern in command:
                 return "Permission denied by DENY_LIST."
-            if bool(DESTRUCTIVE_COMMAND_WORD.search(command)) or any(keyword in command for keyword in DESTRUCTIVE):
-                print(f"\n\033[33m[permission] Potentially destructive command\033[0m")
-                print(f"Tool: {tool_name}({command})")
-                choice = input("===Allow? [yes/No]=== ").strip().lower()
-                if choice not in ("y", "yes"):
-                    return "Permission denied by user"
+        if bool(DESTRUCTIVE_COMMAND_WORD.search(command)) or any(keyword in command for keyword in DESTRUCTIVE):
+            print(f"\n\033[33m[permission] Potentially destructive command\033[0m")
+            print(f"Tool: {tool_name}({command})")
+            choice = input("===Allow? [yes/No]=== ").strip().lower()
+            if choice not in ("y", "yes"):
+                return "Permission denied by user"
     # Gate 2 + 3: Rule matching -> User approval 
     if tool_name in ("read_file", "write_file", "edit_file", "glob_file", "read_image"):
         path = tool_args.get("path", "")
