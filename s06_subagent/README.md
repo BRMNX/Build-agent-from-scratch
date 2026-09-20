@@ -1,11 +1,13 @@
 # UserPrompt:
 
 ```
-Use a subagent to create a python file in s06_subagent/add.py. And make sure that add.py contains a function addNum(a, b), which calculates the result of (a + b) and returns that result. After that, use the parent agent to read the contents in add.py and show me.
+Use a subagent to create a python file in s06_subagent/add.py.
+And make sure that add.py contains a function addNum(a, b), which calculates the result of (a + b) and returns that result.
+After that, use the parent agent to read the contents in add.py and show me.
 ```
 
 # Output:
-
+```
 - Agent loop started.
 - Enter your question, press Enter to send.
 - Type q to quit.
@@ -54,11 +56,10 @@ Done. Here's the result:
 
 **Step 2 — Parent agent** read `s06_subagent/add.py`. Contents:
 
-```python
 def addNum(a, b):
     # returns a + b
     return a + b
-```
 
 The file defines `addNum(a, b)`, which computes `(a + b)` and returns the result.
 [HOOK][info] Stop, session used 5 tool calls.
+```
