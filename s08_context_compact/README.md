@@ -6,7 +6,10 @@
 # UserPrompt
 
 ```
-Read file lyrics.txt, tell me how many chars it has. Then read image test.jpg, describe the contents. Finally, read file s08_context_compact/step9_context_compact.py, tell me how many functions are defined. (Note: Do not change any files.)
+Read file lyrics.txt, tell me how many chars it has.
+Then read image test.jpg, describe the contents.
+Finally, read file s08_context_compact/step9_context_compact.py, tell me how many functions are defined.
+(Note: Do not change any files.)
 ```
 
 # Output
